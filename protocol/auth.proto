@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+package protocol;
+option go_package = ".;protocol";
+message RefreshTokenRequest {
+    string token = 1;
+    string tokenRefresh = 2;
+}
+
+message RefreshTokenResponse {
+    string token = 1;
+    string refreshToken = 2;
+}
+
+message SignInRequest {
+    string login = 1;
+    string password = 2;
+}
+
+message SignInResponse {
+    string name = 1;
+    string surname = 2;
+    string login = 3;
+    string stage = 4;
+    string photo = 5;
+    string token = 6;
+    string refreshToken = 7;
+}
+
+message SignUpRequest {
+    string login = 1;
+    string password = 2;
+    string name = 3;
+    string surname = 4;
+    string stage = 5;
+}
+
+message EmptyResponse {
+}
+
+message ValidateToken {
+    string token = 1;
+}
+
+service AuthService {
+    rpc SignIn (SignInRequest) returns (SignInResponse);
+    rpc SignUp (SignUpRequest) returns (EmptyResponse);
+    rpc RefreshToken (RefreshTokenRequest) returns (RefreshTokenResponse);
+}
