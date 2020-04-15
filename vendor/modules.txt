@@ -14,16 +14,6 @@ github.com/golang/protobuf/ptypes/timestamp
 # github.com/google/uuid v1.1.1
 ## explicit
 github.com/google/uuid
-# github.com/ivansukach/pokemon-auth v0.0.0-20200304153939-b858d41a42ce
-## explicit
-github.com/ivansukach/pokemon-auth/config
-github.com/ivansukach/pokemon-auth/protocol
-github.com/ivansukach/pokemon-auth/repositories/auth
-github.com/ivansukach/pokemon-auth/repositories/claims
-github.com/ivansukach/pokemon-auth/repositories/refreshToken
-github.com/ivansukach/pokemon-auth/repositories/users
-github.com/ivansukach/pokemon-auth/server
-github.com/ivansukach/pokemon-auth/service
 # github.com/jmoiron/sqlx v1.2.0
 ## explicit
 github.com/jmoiron/sqlx
