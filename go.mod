@@ -8,7 +8,6 @@ require (
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
 	github.com/golang/protobuf v1.4.0
 	github.com/google/uuid v1.1.1
-	github.com/ivansukach/pokemon-auth v0.0.0-20200304153939-b858d41a42ce
 	github.com/jmoiron/sqlx v1.2.0
 	github.com/lib/pq v1.3.0
 	github.com/sirupsen/logrus v1.5.0
