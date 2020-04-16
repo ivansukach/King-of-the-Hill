@@ -3,6 +3,8 @@ CREATE TABLE users(
     Password TEXT,
     Name TEXT,
     Surname TEXT,
+    Photo TEXT,
+    Technology TEXT,
     Stage TEXT,
-    Photo TEXT
+    ProgressPoints INT
 );

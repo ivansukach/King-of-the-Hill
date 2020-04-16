@@ -15,7 +15,8 @@ func New(db *sqlx.DB) Repository {
 }
 
 func (ur *userRepository) Create(user *User) error {
-	_, err := ur.db.NamedExec("INSERT INTO users VALUES (:login, :password, :name, :surname, :stage, :photo)", user)
+	_, err := ur.db.NamedExec("INSERT INTO users VALUES (:login, :password, :name, :surname, :photo, technology,"+
+		":stage, :progressPoints)", user)
 	return err
 }
 func (ur *userRepository) Get(login string) (*User, error) {
@@ -25,7 +26,7 @@ func (ur *userRepository) Get(login string) (*User, error) {
 }
 func (ur *userRepository) Update(user *User) error {
 	_, err := ur.db.NamedExec("UPDATE users SET (Login=:login, Password=:password"+
-		"Name=:name, Surname=:surname, Stage=:stage, Photo=:photo) WHERE Login=:login", user)
+		"Name=:name, Surname=:surname, Photo=:photo, Technology=:technology, Stage=:stage, ProgressPoints=:progressPoints) WHERE Login=:login", user)
 	return err
 }
 func (ur *userRepository) Delete(login string) error {

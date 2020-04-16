@@ -2,7 +2,7 @@ module github.com/ivansukach/King-of-the-Hill
 
 go 1.14
 
-//sudo protoc -I protocol --go_out=plugins=grpc:protocol protocol/auth.proto
+//protoc -I . --go_out=plugins=grpc:protocol protocol/auth.proto
 require (
 	github.com/caarlos0/env v3.5.0+incompatible
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible

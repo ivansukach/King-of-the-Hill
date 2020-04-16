@@ -70,13 +70,15 @@ func (s *Server) SignIn(ctx context.Context, req *protocol.SignInRequest) (*prot
 		return nil, err
 	}
 	response := &protocol.SignInResponse{
-		Name:         user.Name,
-		Surname:      user.Surname,
-		Stage:        user.Stage,
-		Photo:        user.Photo,
-		Login:        user.Login,
-		Token:        token,
-		RefreshToken: refresh,
+		Name:           user.Name,
+		Surname:        user.Surname,
+		Technology:     user.Technology,
+		Stage:          user.Stage,
+		ProgressPoints: user.ProgressPoints,
+		Photo:          user.Photo,
+		Login:          user.Login,
+		Token:          token,
+		RefreshToken:   refresh,
 	}
 	return response, nil
 }
