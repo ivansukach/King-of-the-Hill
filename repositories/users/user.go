@@ -1,14 +1,11 @@
 package users
 
 type User struct {
-	Login          string `db:"login"`
-	Password       string `db:"password"`
-	Name           string `db:"name"`
-	Surname        string `db:"surname"`
-	Photo          string `db:"photo"`
-	Technology     string `db:"technology"`
-	Stage          string `db:"stage"`
-	ProgressPoints int64  `db:"progressPoints"`
+	Login    string `db:"login"`
+	Password string `db:"password"`
+	Name     string `db:"name"`
+	Surname  string `db:"surname"`
+	Photo    string `db:"photo"`
 }
 type Repository interface {
 	Create(user *User) error

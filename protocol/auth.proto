@@ -21,12 +21,9 @@ message SignInResponse {
     string name = 1;
     string surname = 2;
     string login = 3;
-    string stage = 4;
-    string technology = 5;
-    int64 progressPoints = 6;
-    string photo = 7;
-    string token = 8;
-    string refreshToken = 9;
+    string photo = 4;
+    string token = 5;
+    string refreshToken = 6;
 }
 
 message SignUpRequest {
@@ -34,8 +31,6 @@ message SignUpRequest {
     string password = 2;
     string name = 3;
     string surname = 4;
-    string stage = 5;
-    string technology = 6;
 }
 
 message EmptyResponse {
